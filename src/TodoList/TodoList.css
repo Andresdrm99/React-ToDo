@@ -1,0 +1,9 @@
+.TodoList{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    ul{
+        padding: 0;
+        width: 100%;
+    }
+}
