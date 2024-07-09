@@ -3,9 +3,9 @@ import React from 'react'
 
 function TodoCounter({total, completed}){
     return (
-      <div className='Header'>
+      <div className='TodoCounter'>
         <h1>
-          Your TODOS 
+          TO DO
         </h1>
         <p>completed {completed} of {total}</p>
       </div>

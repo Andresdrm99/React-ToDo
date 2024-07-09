@@ -1,9 +1,13 @@
-.TodoList{
-    display: flex;
-    justify-content: center;
+.TodoList {
+    display: grid;
+    place-items: center;
+    width: auto;
+    max-width: 920px;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+.TodoList ul {
+    margin: 0;
+    padding: 0 0 56px;
+    list-style: none;
     width: 100%;
-    ul{
-        padding: 0;
-        width: 100%;
-    }
 }

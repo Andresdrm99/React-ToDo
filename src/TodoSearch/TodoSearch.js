@@ -3,7 +3,7 @@ import './TodoSearch.css'
 
 function TodoSearch() {
   return (
-    <input placeholder='Add new TODOS'></input>
+      <input placeholder='New task ...'></input>
   )
 }
 

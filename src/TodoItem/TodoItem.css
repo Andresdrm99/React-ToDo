@@ -1,21 +1,112 @@
-li{
-    list-style-type: none;
+.TodoItem{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     gap: 8px;
-    width: 100%;
-    justify-content: space-between;
-    padding: 12px;
     background: white;
-    margin: 12px;
+    margin-top: 12px;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    padding: 20px;
 
     p{
-        margin: 0;
+        width:calc(100% - 120px);
+        font-size:18px;
+        line-height:24px;
+        font-weight:400;
+        margin:0px 0px 0px 20px;
+
+        &.complete{
+            text-decoration:line-through
+        }
     }
     
     &:hover{
         background:rgb(241, 239, 239);
     }
+
+    .options{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: transparent;
+        margin-left: auto;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .optionsIcon{
+            transform: scale(1.2);
+            width: 100%;
+            height: 100%;
+
+            &:hover{
+                path{
+                    fill: green;
+                }
+            }
+        }
+    }
+
+    /* Oculta el checkbox nativo */
+.custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Estilos para el contenedor del checkbox */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilos para el checkbox personalizado */
+  .custom-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox-mark {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+  
+  /* Estilos para el checkbox cuando está marcado */
+  .custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-mark {
+    background-color: #4caf50;
+    border-color: #4caf50;
+  }
+  
+  /* Estilos para la marca de verificación */
+  .custom-checkbox-mark::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0;
+  }
+  
+  /* Mostrar la marca de verificación cuando está marcado */
+  .custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-mark::after {
+    opacity: 1;
+  }
 }
+
+ 
+

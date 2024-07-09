@@ -3,7 +3,7 @@ import './CreateTodoButton.css'
 
 export default function CreateTodoButton() {
   return (
-    <button> Create TODO </button>
+    <button className='createButton'> Create </button>
   )
 }
 

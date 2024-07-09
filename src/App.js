@@ -15,25 +15,24 @@ const defaultTodos = [
 
 function App() {
   return (
-    <div className='App'>
-      <div className='TodosTitle'>
-        <TodoCounter completed={16} total={25}/>
-      </div>
-      <div className='List'>
-        <TodoSearch />
-        <TodoList>
-          {defaultTodos.map(todo => (
-            <TodoItem 
-              key={todo.text} 
-              text={todo.text}
-              completed={todo.completed}
-            />
-          ))}
-        </TodoList>
-      </div>
 
-      <CreateTodoButton/>
-    </div>
+    <>
+      <TodoCounter completed={16} total={25}/>
+      <div className='search'>
+        <TodoSearch/>
+        <CreateTodoButton/>
+      </div>
+      <TodoList>
+        {defaultTodos.map(todo => (
+          <TodoItem 
+            key={todo.text} 
+            text={todo.text}
+            completed={todo.completed}
+          />
+        ))}
+      </TodoList>
+    </>
+    // </div>
   );
 }
 
