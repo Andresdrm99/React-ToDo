@@ -14,12 +14,18 @@ const defaultTodos = [
 ];
 
 function App() {
-  return (
+  const[searchValue, setSearchValue] = React.useState('');
+  const [todos, setodos] = React.useState(defaultTodos);
 
+  const completedTodos = todos.filter(todo => todo.completed).length;
+  const totalTodos = todos.length;
+
+  console.log('el value es: ', searchValue)
+  return (
     <>
-      <TodoCounter completed={16} total={25}/>
+      <TodoCounter completed={completedTodos} total={totalTodos}/>
       <div className='search'>
-        <TodoSearch/>
+        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
         <CreateTodoButton/>
       </div>
       <TodoList>
